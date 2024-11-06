@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Cadastro</title>
+    <fieldset>
+        <style>
+            .pass {
+                color: green;
+            }
+
+            .fail {
+                color: red;
+            }
+
+            #sintomas {
+                height: 70px;
+            }
+
+
+
+            body {
+                background-image: url('img/composicao-medica-plana-leiga-com-copyspace_23-2148124823.jpg');
+                /* Substitua pelo caminho da sua imagem */
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* Para cobrir toda a tela */
+                background-position: center;
+                /* Para centralizar a imagem */
+            }
+
+            .h2 {
+                border: white;
+            }
+        </style>
+</head>
+
+<body>
+
+
+
+
+    <center><br><br><br><br><br><br><br>
+        <h2>Verificação de Cadastro</h2>
+
+        <!-- Formulário para entrada de dados -->
+
+        Nome: <input id="nome"><br><br>
+        Idade: <input id="idade"><br><br>
+        CPF: <input id="cpf"><br><br>
+        Sintomas: <input id="sintomas"><br><br>
+        <button onclick="verificarCadastro()">Verificar</button><br><br><br><br>
+        <h3>Resultados:</h3>
+        <div id="resultados"></div>
+
+        <script>
+            // Função para verificar nome e idade
+            function verificarCadastro() {
+                // Limpar resultados anteriores
+                const resultadosDiv = document.getElementById('resultados');
+                resultadosDiv.innerHTML = '';
+
+                // Obter valores de entrada
+                const nome = document.getElementById('nome').value;
+                const idade = document.getElementById('idade').value;
+                const cpf = document.getElementById('cpf').value;
+                const sintomas = document.getElementById('sintomas').value;
+
+                // Validar nome (deve ter pelo menos 3 letras)
+                if (nome.length >= 3) {
+                    resultadosDiv.innerHTML += '<p class="pass">✔️ Nome válido</p>';
+                } else {
+                    resultadosDiv.innerHTML += '<p class="fail">❌ Nome inválido (mínimo 3 letras)</p>';
+                }
+
+                // Validar idade (deve estar entre 18 e 120 anos)
+                if (idade >= 18 && idade <= 120) {
+                    resultadosDiv.innerHTML += '<p class="pass">✔️ Idade válida</p>';
+                } else {
+                    resultadosDiv.innerHTML += '<p class="fail">❌ Idade inválida (deve ser entre 18 e 120 anos)</p>';
+                }
+
+                // Validar CPF deve ter (11 digitos)
+                if (cpf.length <= 11) {
+                    resultadosDiv.innerHTML += '<p class="pass">✔️ CPF válida</p>';
+                } else {
+                    resultadosDiv.innerHTML += '<p class="fail">❌ CPF inválido (deve ter pelo menos 11 números)</p>';
+                }
+
+                // o paciente deve digitar os sisntomas
+                if (sintomas.length >= 5 && sintomas.length <= 100) {
+                    resultadosDiv.innerHTML += '<p class="pass">✔️ sintomas válidos</p>';
+                } else {
+                    resultadosDiv.innerHTML += '<p class="fail">❌ sintomas inválidos (deve ter pelo menos 5 caracteres ate 100)</p>';
+                }
+            }
+        </script>
+        </fieldset>
+</body>
+
+</html>
