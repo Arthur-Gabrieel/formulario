@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Cadastro</title>
+    
+    <style>
+        body {
+            background-image: url('enfermeira 355.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 160px;
+            margin: 0;
+        }
+
+        .top-banner { /* Adiciona um banner no topo */
+            width: 100%;
+            background-color: rgb(43, 146, 230);
+            padding: 3px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .right-banner { /* Adiciona um banner para direita */
+            position: fixed;
+            top: 3px;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background-color: rgb(43, 146, 230);
+        }
+
+        .left-banner { /* Adiciona um banner na esquerda */
+            background-color: rgb(43, 146, 230);
+            position: fixed;
+            top: 3px;
+            left: 0;
+            width: 5px;
+            height: 100%;
+        }
+
+        .bottom-banner { /* Adiciona um banner em baixo */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(43, 146, 230);
+            padding: 3px;
+        }
+
+        label {
+            color: white;
+        }
+
+        input, textarea {
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgb(43, 146, 230);
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(31, 122, 178);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2 style="color: white;">Verificação de Cadastro</h2>
+
+        <label for="nome">Nome: <input id="nome"></label><br><br>
+        <label for="idade">Idade: <input id="idade"></label><br><br>
+        <label for="cpf">CPF: <input maxlength="14" id="cpf"></label><br><br>
+        <span style="color: white;">*Digite CPF sem pontos.</span><br><br>   
+        <label for="sintomas">Sintomas: <textarea id="sintomas" maxlength="100"></textarea></label><br><br>
+
+        <button onclick="verificarCadastro()">Verificar</button>
+        <div id="resultados"></div>
+        
+        <!-- Banners -->
+        <div id="top-banner" class="top-banner"></div>
+        <div class="right-banner"></div>
+        <div class="left-banner"></div>
+        <div class="bottom-banner"></div>
+    </center>
+
+    <script>
+        // Função para verificar nome e idade
+        function verificarCadastro() {
+            // Limpar resultados anteriores
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = '';
+
+            // Obter valores de entrada
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const cpf = document.getElementById('cpf').value;
+            const sintomas = document.getElementById('sintomas').value;
+
+            // Validar nome (deve ter pelo menos 3 letras)
+            if (nome.length >= 3 && idade >= 18 && idade <= 120 && cpf.length === 14 && !isNaN(cpf.replace(/\D/g, '')) && sintomas.length >= 5 && sintomas.length <= 100) {
+                sessionStorage.setItem("nome", nome);
+                sessionStorage.setItem("idade", idade);
+                sessionStorage.setItem("cpf", cpf);
+                sessionStorage.setItem("sintomas", sintomas);
+                window.location.href = "dr.html";
+            } else {
+                alert('ACESSO NEGADO: verifique as informações.');
+            }
+        }
+
+        // Função para formatar CPF
+        function formatarCPF(cpf) {
+            // Remove caracteres não numéricos
+            cpf = cpf.replace(/\D/g, '');
+            
+            // Aplica a máscara no formato XXX.XXX.XXX-XX
+            if (cpf.length <= 3) {
+                return cpf;
+            } else if (cpf.length <= 6) {
+                return cpf.replace(/(\d{3})(\d+)/, '$1.$2');
+            } else if (cpf.length <= 9) {
+                return cpf.replace(/(\d{3})(\d{3})(\d+)/, '$1.$2.$3');
+            } else {
+                return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+            }
+        }
+
+        // Adiciona o evento de formatação ao campo CPF
+        document.getElementById('cpf').addEventListener('input', function () {
+            const input = document.getElementById('cpf');
+            input.value = formatarCPF(input.value);
+        });
+    </script>
+</body>
+
+</html>

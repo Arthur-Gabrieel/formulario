@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="css/est.css">
+   <style>
+
+body {
+    background-image: url('enfermeira5555.png');
+    background-size: cover;  /* faz a imagem ocupar a tela toda*/ 
+    background-repeat: no-repeat;  /* faz a imagem nao repetir*/
+}
+   </style>
+
+
+</head>
+
+<body>
+    <!--Criação do link d Instagram-->
+    <div class="container">
+        <div class="info">
+            <a href="https://www.instagram.com/djtrucooficial/profilecard/?igsh=MXd6OWZka25oaHFndw==" class="Instagram-link">
+                <img src="download-removebg-preview.png" alt="foto Instagram" class="instagram-fot">
+            </a>
+            <a href="https://www.instagram.com/djtrucooficial/profilecard/?igsh=MXd6OWZka25oaHFndw==" class="Instagram-link">DJ Truco</a>
+        </div>
+        <div class="inf">
+            <a href="https://www.instagram.com/igorgrl30?igsh=dTJvODhqcG1kNml3" class="Instagram-link">
+                <img src="download-removebg-preview.png" alt="foto Instagram" class="instagram-fot">
+            </a>
+            <a href="https://www.instagram.com/igorgrl30?igsh=dTJvODhqcG1kNml3" class="Instagram-link">Igor</a>
+        </div>
+        <div class="info">
+            <a href="https://www.instagram.com/arthur_g.rs?igsh=dTByaWswenlkbnJ2" class="Instagram-link">
+                <img src="download-removebg-preview.png" alt="foto Instagram" class="instagram-fot">
+            </a>
+            <a href="https://www.instagram.com/arthur_g.rs?igsh=dTByaWswenlkbnJ2" class="Instagram-link">Arthur</a>
+        </div>  
+    </div>
+    <!-- Criação dos Divs para os banners-->
+   <div id="top-banner" class="top-banner"></div>
+    <div class="right-banner"></div>
+    <div class="left-banner"></div>
+    <div class="bottom-banner"></div>
+    
+    <center>
+
+        <!--Mudar a cor do Título Resultado...-->
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2 style="color: white;">Resultados de Cadastro</h2>
+        
+    <!--Criação das divs dados e nome-->
+        <div id="dados"></div>
+        <div id="nome"></div>
+        
+     <script>
+                    //Armazenamento do Resultado//
+        const nome = sessionStorage.getItem('nome');
+         const idade = sessionStorage.getItem('idade');
+          const cpf = sessionStorage.getItem('cpf');
+           const sintomas = sessionStorage.getItem('sintomas');
+             if (nome && idade && cpf && sintomas) {
+                 document.getElementById('dados').innerHTML = `
+                 <p><strong>Nome:</strong> ${nome}</p>
+                 <p><strong>Idade</strong> ${idade}</p>
+                 <p><strong>cpf:</strong> ${cpf}</p>
+                 <p><strong>Sintomas:</strong> ${sintomas}</p> `;
+             } else {
+                 document.getElementById('dados').innerHTML = '<p>Dados não encontrados.</p>';
+             }
+             
+             
+             const dadosDiv = document.getElementById('dados');
+             
+             dadosDiv.classList.add('dados-encontrados'); {
+                if (nome && idade && cpf && sintomas) {
+    // Exibe os dados se encontrados
+    dadosDiv.innerHTML = `
+        <p><strong>Nome:</strong> ${nome}</p>
+        <p><strong>Idade:</strong> ${idade}</p>
+        <p><strong>CPF:</strong> ${cpf}</p>
+        <p><strong>Sintomas:</strong> ${sintomas}</p>
+    `;
+    // Adiciona a classe para cor verde (dados encontrados)
+    dadosDiv.classList.add('dados-encontrados');
+} else {
+    // Exibe mensagem de erro se os dados não forem encontrados
+    dadosDiv.innerHTML = '<p>Dados não encontrados.</p>';
+    // Adiciona a classe para cor vermelha (dados não encontrados)
+    dadosDiv.classList.add('dados-nao-encontrados');
+} }
+  
+            
+     </script>
+
+</body>
+
+                                    <!--Fim do Código-->
+</html>
+ 

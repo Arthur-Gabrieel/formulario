@@ -1,0 +1,85 @@
+
+
+.top-banner {
+width: 100%;
+background-color: rgb(43, 146, 230);
+padding: 3px 0;
+position: fixed;
+top: 0;
+left: 0;
+}
+.right-banner {
+position: fixed;
+top: 3px;
+right: 0;
+width: 5px;
+height: 100%;
+background-color:rgb(43, 146, 230) ;
+}
+.left-banner {
+background-color: rgb(43, 146, 230) ;
+position: fixed;
+top: 3px;
+left: 0;
+width: 5px;
+height: 100%;
+}
+.bottom-banner {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color:  rgb(43, 146, 230);
+padding: 3px;
+}
+
+.dados-encontrados {
+    color: white; /* Cor do texto quando os dados forem encontrados */
+}
+
+/* Caso os dados não sejam encontrados */
+.dados-nao-encontrados {
+    color: white; /* Cor do texto quando não houver dados */
+}
+
+
+    /* Definindo o layout da container */
+.container {
+    position: fixed; /* Fixa a posição na tela */
+    bottom: 20px; /* Coloca a div 20px acima da parte inferior */
+    right: 20px; /* Coloca a div 20px do lado direito */
+    width: 200px; /* Define uma largura menor para o container */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Estilo para as divs info e inf */
+.info, .inf {
+    display: flex;
+    flex-direction: column; /* Coloca o link e a imagem em coluna */
+    align-items: center; /* Alinha os itens no centro */
+    text-align: center; /* Alinha o texto no centro */
+    margin-bottom: 10px; /* Espaço entre as seções */
+}
+
+/* Estilo para o link */
+.Instagram-link {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px; /* Ajusta o espaçamento entre o link e a imagem */
+    display: block;
+}
+
+/* Estilo para as imagens */
+.instagram-fot {
+    width: 50px; /* Reduz a largura da imagem */
+    height: 50px; /* Reduz a altura da imagem */
+    object-fit: cover; /* Para que a imagem não distorça */
+    border-radius: 50%; /* Torna a imagem circular */
+    cursor: pointer; /* Altera o cursor para indicar que a imagem é clicável */
+}
+
+                                    /*Fim do Código*/
