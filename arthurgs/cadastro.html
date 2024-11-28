@@ -1,0 +1,145 @@
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="CSS/estilo.css">
+
+</head>
+
+                                <!--Corpo é Início do cadastro-->
+<body>
+                <!--Criação do Style-->
+    <style>
+            body {              /*muda a cor de fundo do site*/
+                background-color: rgb(3, 1, 34);  
+                
+            }
+            
+            
+            label {             /*muda a cor de todos os labels*/
+                color:white;
+            }
+
+            .radio {            /*muda a cor do sexo, masculino e feminino*/
+
+                color:white;
+             }
+             
+             fieldset {     /* muda a cor do fieldset*/
+                color: white;
+             }
+                                
+            footer {            /*muda a cor dos direitos*/
+                color:white;
+            }
+            
+            a {                     /*muda a cor do (author) dos direitos*/
+                color: rgb(237, 231, 231);
+                text-decoration: none;
+            }
+
+            a:hover{                    /* :Hover: muda a cor do "link"*/
+                color: rgb(49, 47, 47);
+                
+            }
+
+            button {
+                color: rgb(4, 4, 4);
+                background-color: rgb(179, 171, 171);
+            }
+
+            
+            
+           
+
+    
+    
+    </style>
+                <!--Fechamento do Style-->
+
+                <fieldset><legend>CADASTRO DE USUÁRIO</legend><br>   <!--Fieldset: dar uma borda-->
+<form name="formalunos" method="post" action="">
+    <label for="usuário"> NOME DO USUÁRIO:</label>
+*   <input type="text" id="usuário" name="usuário" style="width: 310px"> <br><br>
+
+
+<button><a href="you.html">VOLTAR</a></button>      <!--Button: Adiciona um botão clicável-->
+
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="LIMPAR" name="limpar">
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="ENVIAR" name="enviar">
+<label for="data">DATA DE NASCIMENTO:</label>
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" id="data" name="data"> <br><br> <!--Br: Adiciona unma quebra de linha-->
+
+   <label>sexo:<input type="radio" name="sexo" value="Maculino">Masculino
+     <input type="radio" name="sexo" value="Feminino">Feminino</label><br><br>
+     
+    <label for="cpf">CPF:
+*   <input type="text" id="costumer['cpf']" name="cpf" placeholder="###.###.###.##"> <br>
+    (sem espaços, pontos ou traços)</label><br><br>
+
+    <label for="telefone">TELEFONE:</label>
+    <input type="text" id="telefone" name="telefone" placeholder="(##) #####-####" autocomplete="off"  style="width: 150px;"> <br>
+  <br>
+    
+    <label for="endereço">ENDEREÇO</label>
+    <input tye="text" id="endereço" name="endereço" style="width: 300px"> <br><br>
+
+    <label for="complemento">COMPLEMENTO:</label>
+    <input type="text" id="complemento" name="complemento" style="width: 263px"> <br><br>
+
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" placeholder="####.###" autocomplete="off"> <br><br>
+
+    <label for="bairro">BAIRRO:</label>
+    <input for="bairro" id="bairro" name="bairro"  style="width: 327px;"> <br><br>
+
+    <label for="cidade">CIDADE:</label>
+    <input type="text" id="cidade" name="cidade"/> <br><br>
+
+    <label for="estado">ESTADO:</label>
+    <select name="estado" id="select">
+
+        <option value="">SELECIONE O ESTADO:</option>
+        <option value="ac">Acre</option>
+        <option value="al">Alagoas</option>
+        <option value="ap">Amapá</option>
+        <option value="am">Amazonas</option>
+        <option value="ba">Bahia</option>
+        <option value="ce">Ceará</option>
+        <option value="df">Distrito Federal</option>
+        <option value="es">Espírito Santo</option>
+        <option value="go">Goiás</option>
+        <option value="ma">Maranhão</option>
+        <option value="ms">Mato Grosso do Sul</option>
+        <option value="mt">Mato Grosso</option>
+        <option value="mg">Minas Gerais</option>
+        <option value="pa">Pará</option>
+        <option value="pb">Paraíba</option>
+        <option value="pr">Paraná</option>
+        <option value="pe">Pernambuco</option>
+        <option value="pi">Piauí</option>
+        <option value="rj">Rio de Janeiro</option>
+        <option value="rn">Rio Grande do Norte</option>
+        <option value="rs">Rio Grande do Sul</option>
+        <option value="ro">Rondônia</option>
+        <option value="rr">Roraima</option>
+        <option value="sc">Santa Catarina</option>
+        <option value="ac">Acre</option>
+        <option value="sp">São Paulo</option>
+        <option value="se">Sergipe</option>
+        <option value="to">Tocantins</option>
+        </select>
+        <br><br>
+        
+        
+        
+    </fieldset>
+    
+
+    <footer>
+        <br>
+          <center><p><a href="mailto: gabrielarthur61584@gmail.com"> Author: Arthur Gabriel Souza Rodrigues</a> - ART Qualidade & Desenvolvimento LTDA - Todos os direitos reservados </p></center>  <!--Center: Usado para centralizar-->
+        </footer>  
+</body>
+    
+</form>
+</html>
+                                            <!--Fim do cadastro-->
