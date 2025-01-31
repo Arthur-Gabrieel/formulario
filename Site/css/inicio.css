@@ -1,0 +1,498 @@
+#top-banner {                       
+    background-color: rgb(141, 137, 137);
+    width: 1200px;
+    top: 0;                                                /*banner do topo*/
+    left: 0px;
+    height: 50px;
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+#entrar-banner {
+    background-color: rgb(141, 137, 137);
+    width: 300px;
+    top: 0;                                                /*banner do topo*/
+    right: 0px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+#aguia {
+    position: absolute;
+    top: -3px;
+    left: 5px;                          /*logo do topo do banner*/
+    width: 65px;
+    height: 60px;
+    z-index: 1000;
+}
+#people{
+    position: absolute;
+    top: 8px;
+    right: 245px;                          /*logo do topo do banner*/
+    width: 37px;
+    height: 35px;
+    z-index: 1000;
+
+
+
+
+}
+#velocity {
+    position: absolute;
+    top: -17px;
+    left: 75px;
+    width: 45px;                        /*nome do topo do banner*/
+    height: 55px;
+    color:rgb(228, 225, 225);
+    z-index: 1100;
+}
+#entrar {
+    position: absolute;
+    top: 15px;
+    right: 190px;
+    padding: 2px;                          /*link login*/
+    z-index: 1100;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+#entrar:hover {
+    color: rgb(7, 7, 7);
+    padding: 2px;                              
+    background-color: rgb(247, 245, 245);
+  
+
+}
+
+
+
+#page2 {
+    position: absolute;
+    top: 15px;
+    left: 460px;
+    padding-bottom: 10px;                            /*link Comprar*/
+    z-index: 1100;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#page2:hover {
+    color: white;
+    border-bottom: solid rgb(255, 255, 255) ;
+
+}
+ 
+
+
+#page3 {
+    position: absolute;
+    top: 15px;
+    left: 550px;
+    padding-bottom: 10px;
+    background-color: rgb(141, 137, 137);       /*link pagina3*/
+    z-index: 1100;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#page3:hover {
+    color: white;
+    border-bottom: solid rgb(255, 255, 255) ;
+
+}
+ 
+#page4 {
+    position: absolute;
+    top: 15px;
+    left: 635px;
+    padding-bottom: 10px;
+    background-color: rgb(141, 137, 137);       /*link Serviço*/
+    z-index: 1100;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+}
+#page4:hover {
+    color: white;
+    border-bottom: solid rgb(255, 255, 255) ;
+
+}
+
+#page5 {
+    position: absolute;
+    top: 15px;
+    left: 725px;
+    padding-bottom: 10px;
+    background-color: rgb(141, 137, 137);       /*link Ajuda*/
+    z-index: 1100;
+    text-decoration: none;
+    color: white;
+    transition: all 1s ease;
+}
+#page5:hover {
+    color: white;
+    border-bottom: solid rgb(255, 255, 255) ;
+
+}
+
+                                    /*Fim do topo da página*/
+
+                                    /*DESIGN DO CARROSEL*/
+.carrossel {
+    position: relative;
+    width: 100vw;       /* A largura do carrossel será 100% da largura da tela */
+    height: auto;       
+    overflow: hidden;   /* Impede que a imagem vaze fora do carrossel */
+}
+
+.slides {
+    display: flex;      /* Exibe os slides em linha (horizontalmente) */
+    transition: transform 0.5s ease; /* Transição suave entre os slides */
+}
+
+.slide {
+    flex: 0 0 100%;     /* Cada slide ocupa 100% da largura do carrossel */
+    height: auto;       /* A altura é ajustada proporcionalmente */
+}                     
+                        
+.img1 {
+    width: 100%;        
+    height: 230px;      
+    object-fit: cover;  /* Faz a imagem cobrir o espaço sem distorção  */
+}
+      
+             /*design banners1*/
+#banners1 {
+    background-color: white;
+    position: absolute;
+    width: 700px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    top: 315px;                
+    left: 50%; 
+    border-radius: 20px;         
+    z-index: 8999;
+}
+#interface .banner_1 {
+    left: 350px;
+    top: -15px;
+    position: relative;
+    z-index: 9000;
+    padding: 10px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    padding-bottom: 4px;
+    color: black;
+    
+
+}
+.banner_1:hover{
+    border-bottom: solid  #ca0f0f;
+}
+
+        /*Barra de pesquisa*/
+    
+#interface .search-bar {
+    display: flex;
+    left: 350px;
+    top: 7px;
+    z-index: 9000;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.search-bar button {
+    padding: 10px 15px;
+    background-color:  #ca0f0f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 200px;
+    top: 45px;
+}
+
+#interface.search-bar button:hover {
+    background-color: #da1010;
+    
+}
+
+#searchResults {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/*Imagens com zoom*/
+#interface .image-zoom {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    margin-top: 50px; 
+}
+
+/*Imagem com Zoom*/
+
+.image-zoom img{
+    width: 500px;
+    height: 450px;
+    object-fit: cover;
+    position: relative;
+    top: 50px;
+    transition: transform 1s ease;
+    transform: center center;
+    overflow: hidden;
+}
+
+.image-zoom img:hover{
+    transform: scale(1.05);
+}
+
+/*Botões das Imagens com zoom*/
+
+#interface #button-img1{
+    position: relative;
+    background-color: #ca0f0f;
+    left: -350px;
+    top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 9000;
+    cursor: pointer;
+}
+
+#interface #button-img1:hover{
+    background-color: white;
+    color: #ca0f0f;
+  
+}
+
+#interface #button-img2{
+    position: relative;
+    background-color: #ca0f0f;
+    left: -25px;
+    top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    z-index: 9000;
+}
+#interface #button-img2:hover{
+    background-color: white;
+    color: #ca0f0f;
+  
+}
+
+#interface #button-img3{
+    position: relative;
+    background-color: #ca0f0f;
+    left: 320px;
+    top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    z-index: 9000;
+}
+#interface #button-img3:hover{
+    background-color: white;
+    color: #ca0f0f;
+  
+}
+
+/*saiba mais moto e carro*/
+
+#xre {
+    position: relative;
+    width: 380px;
+    height: 280px;
+    top: 230px;
+    right: 120px;
+}
+
+.pos-moto {
+    position: relative;
+    right: -280px;
+    top: -230px; 
+}
+#sai-moto {
+    position: relative;
+    top: 60px;
+    left: 300px;
+    text-decoration: none;
+    background-color: #ca0f0f;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+
+}
+#sai-moto:hover{
+    color:#ca0f0f;
+    background-color: white;
+
+}
+
+#civic {
+    position: relative;
+    width: 300;
+    height: 120;
+    left: 220px;
+    top: 220px; 
+}
+#sai-car {
+    position: relative;
+    top: -4px;
+    left:200px;
+    text-decoration: none;
+    background-color: #ca0f0f;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+#sai-car:hover{
+    color:#ca0f0f;
+    background-color: white
+}
+
+.pos-car {
+    position: relative;
+    left: 220px;
+    top: -297px;
+
+}
+
+section#seçao {
+    display: block;
+    position: relative;
+    width: 500px;
+    height: 520px;
+    float: left;
+    border-right: 1px solid rgb(139, 138, 138);
+    left: 150px;
+    top: 50px;
+   
+    
+}
+
+aside#seçao2{
+    display: block;
+    position: relative;
+    width: 500px;
+    float: right;
+    top: -150px;
+    left: -100px;
+    height: 500px;
+  
+   
+
+}
+#rodapee {
+    border-top: 1px solid rgb(139, 138, 138);
+    top: 60px;
+    position: relative;
+
+}
+
+.opçoes1 {
+    position: relative;
+    left: 180px;
+    top: 25px;
+    color: white;
+}
+
+
+.opçoes2 {
+    position: relative;
+    left: 400px;
+    top: -221px;
+    color: white;
+}
+
+.opçoes3{
+    position: relative;
+    left: 180px;
+    top: -386px;
+    color: white;
+
+}
+
+.opçoes4 {
+    position: relative;
+    left: 650px;
+    top: -833px;
+    color: white;
+}
+
+.opçoes5{
+    position: relative;
+    left:850px;
+    top: -1236px;
+    color: white;
+}
+
+#banner-insta {
+    position: relative;
+    background-color: white;
+    top: 50px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+    z-index: 9000;
+ 
+
+}
+
+
+
+
+
+
+
+
+footer#rodape {
+
+    position: relative;
+    bottom: -150px;
+    top: 80px;
+    right: 60px;
+    background-color: rgb(134, 15, 15);
+    width: 1700px;
+    height: 500px;
+    
+}
+
+footer#direitos{
+    position: relative;
+    width: 2000px;
+    right: 60px;
+    top: 50px;
+    background-color: rgb(141, 137, 137);
+    height:50px;
+
+}
+
+
+
+
+
+
+                        
