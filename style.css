@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+/*Quadrado*/
+.topo {
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.781);
+    margin: 10px;
+    width: 500px;
+    padding: 20px;
+    margin-top: 15%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+/*mensagem*/
+#mensagem {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+h2 {
+    display: flex;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #000000, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -180px;
+
+}
+
+.bottaon {
+    border-radius: 20px;
+    background-color: rgb(7, 7, 37);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+.bottaon {
+    border-radius: 20px;
+    background-color: rgb(7, 7, 37);
+    color: white;
+    cursor: pointer;
+
+}
+
+input {
+    margin-top: 10px;
+}
+
+.bottaon {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: none;
+    padding: 6px 15px;
+    font-size: 18px;
+}
+
+.bottaon:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    position: absolute;
+    height: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+/*logo da pagina*/
+#logo{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    animation: float 3s infinite ease-in-out;
+    
+    
+}
+/*Animação da logo*/
+@keyframes float{
+    0%{transform: translate(0);}
+    50% {transform: translate(-10px);}
+    100%{transform: translate(0);}
+}
+
+/*video de fundo*/
+#video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+    /*E-mail*/
+#email {
+    border-radius: 5px;
+    height: 30px;
+    width: 92%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background:rgb(7, 7, 37);
+    border: 2px solid rgba(54, 54, 54, 0.329);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+}
+/*Detalhes do e-mail*/
+#email:focus {
+    border-color: #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+/*Senha*/
+#senha {
+    border-radius: 5px;
+    height: 30px;
+    width: 92%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background: rgb(7, 7, 37);
+    border: 2px solid rgba(54, 54, 54, 0.329);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+}
+/*Detalhes da senha*/
+#senha:focus {
+    border-color: #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+
+ 

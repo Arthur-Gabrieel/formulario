@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Card com Modal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 100px;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .close-btn {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CARD -->
+  <div class="card">
+    <img src="img/mercurio.png" alt="Mercúrio">
+    <div class="card-content">
+      <h3>Mercúrio</h3>
+      <p>O menor planeta do sistema solar e o mais próximo do Sol.</p>
+    </div>
+    <button onclick="abrirModal()">Saiba Mais</button>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modalMercurio">
+    <div class="modal-content">
+      <img src="img/mercurio.png" alt="Mercúrio">
+      <h2>Mercúrio</h2>
+      <p>
+        Mercúrio é o planeta mais próximo do Sol e o menor do sistema solar. Ele não tem atmosfera significativa e possui temperaturas extremas.
+      </p>
+      <button class="close-btn" onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const modal = document.getElementById('modalMercurio');
+
+    function abrirModal() {
+      modal.style.display = 'flex';
+    }
+
+    function fecharModal() {
+      modal.style.display = 'none';
+    }
+
+    window.onclick = function(e) {
+      if (e.target === modal) {
+        fecharModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
